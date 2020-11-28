@@ -1,0 +1,279 @@
+/* ### CSS vars ### */
+:root {
+  // Color theme one
+  // --color-background-one: #000;
+  // --color-theme-one: rgba(77, 200, 186, 1);
+  // --link-color: #35bbf5;
+  // --text-shadow-color: #1a5210;
+
+  // Color theme two
+  // --color-background-one: #E9C46A;
+  // --color-theme-one: rgba(38, 70, 83, 1); // dark green
+  --color-background-one: rgba(38, 70, 83, 1); // dark green
+  --color-theme-one: #e9c46a;
+  --link-color: var(--color-theme-one);
+  --text-shadow-color: #e76f51;
+
+  /* --line-height-h1:  */
+  --font-size-h1: 4rem;
+  --line-height: 1.5;
+  --line-height-less: 1.2;
+  // --link-color: #35bbf5;
+  --padding-default: 1rem;
+  --text-shadow-one: 0.05rem 0.05rem var(--text-shadow-color);
+}
+
+// SASS VARS
+/* --- media queries --- */
+$bp-md: 768px;
+
+/*
+ * What follows is the result of much research on cross-browser styling.
+ * Credit left inline and big thanks to Nicolas Gallagher, Jonathan Neal,
+ * Kroc Camen, and the H5BP dev community and team.
+ */
+
+/* ==========================================================================
+   Base styles: opinionated defaults
+   ========================================================================== */
+
+html {
+  color: var(--color-theme-one);
+  font: 1em Arial, 'Helvetica Neue', Helvetica, sans-serif;
+  line-height: var(--line-height);
+}
+
+/*
+   * Remove text-shadow in selection highlight:
+   * https://twitter.com/miketaylr/status/12228805301
+   *
+   * Vendor-prefixed and regular ::selection selectors cannot be combined:
+   * https://stackoverflow.com/a/16982510/7133471
+   *
+   * Customize the background color to match your design.
+   */
+
+::selection {
+  background: #b3d4fc;
+  text-shadow: none;
+}
+
+/*
+   * A better looking default horizontal rule
+   */
+
+hr {
+  display: block;
+  height: 1px;
+  border: 0;
+  border-top: 1px solid #ccc;
+  margin: 1em 0;
+  padding: 0;
+}
+
+/*
+   * Remove the gap between audio, canvas, iframes,
+   * images, videos and the bottom of their containers:
+   * https://github.com/h5bp/html5-boilerplate/issues/440
+   */
+
+audio,
+canvas,
+iframe,
+img,
+svg,
+video {
+  vertical-align: middle;
+}
+
+/*
+   * Remove default fieldset styles.
+   */
+
+fieldset {
+  border: 0;
+  margin: 0;
+  padding: 0;
+}
+
+/*
+   * Allow only vertical resizing of textareas.
+   */
+
+textarea {
+  resize: vertical;
+}
+
+/* ==========================================================================
+   Author's custom styles
+   ========================================================================== */
+
+html {
+  height: 100%;
+}
+
+body {
+  background-color: var(--color-background-one);
+  height: 100%;
+  line-height: var(--line-height);
+  margin: 0;
+}
+
+header {
+  /* grid-column: 1/4; */
+  padding-left: var(--padding-default);
+  padding-right: var(--padding-default);
+}
+
+h1 {
+  font-size: var(--font-size-h1);
+  margin-bottom: 0;
+  margin-top: 0.5rem;
+  text-shadow: var(--text-shadow-one);
+}
+
+.header__inner {
+  /* grid-column: 2; */
+}
+
+header p {
+  margin-top: 0;
+  // text-shadow: var(--text-shadow-one);
+}
+
+main {
+  /* grid-column: 2; */ /* Take this out if "body > *" grid styling is reinstated */
+  padding-left: var(--padding-default);
+  padding-right: var(--padding-default);
+}
+
+footer {
+  /* grid-column: 2; */ /* Take this out if "body > *" grid styling is reinstated */
+  padding-bottom: var(--padding-default);
+  padding-left: var(--padding-default);
+  padding-right: var(--padding-default);
+  padding-top: var(--padding-default);
+}
+
+a {
+  color: var(--link-color);
+}
+
+select {
+  height: 24px;
+  margin-bottom: 1.5rem;
+}
+
+section {
+  /*display: grid;*/
+  /*grid-template: auto / 80% 20%;*/
+}
+
+@media only screen and (min-width: $bp-md) {
+  section {
+    display: grid;
+    grid-template: auto / 80% 20%;
+    background-color: #add8e64a;
+    border: 5px solid red;
+  }
+}
+
+.controls {
+  display: grid;
+  align-content: start;
+}
+
+/* ==========================================================================
+   Helper classes
+   ========================================================================== */
+
+/*
+ * Hide visually and from screen readers
+ */
+
+.hidden {
+  display: none !important;
+}
+
+/*
+ * Hide only visually, but have it available for screen readers:
+ * https://snook.ca/archives/html_and_css/hiding-content-for-accessibility
+ *
+ * 1. For long content, line feeds are not interpreted as spaces and small width
+ *    causes content to wrap 1 word per line:
+ *    https://medium.com/@jessebeach/beware-smushed-off-screen-accessible-text-5952a4c2cbfe
+ */
+
+.visuallyhidden {
+  border: 0;
+  clip: rect(0 0 0 0);
+  height: 1px;
+  margin: -1px;
+  overflow: hidden;
+  padding: 0;
+  position: absolute;
+  width: 1px;
+  white-space: nowrap; /* 1 */
+}
+
+/*
+ * Extends the .visuallyhidden class to allow the element
+ * to be focusable when navigated to via the keyboard:
+ * https://www.drupal.org/node/897638
+ */
+
+.visuallyhidden.focusable:active,
+.visuallyhidden.focusable:focus {
+  clip: auto;
+  height: auto;
+  margin: 0;
+  overflow: visible;
+  position: static;
+  width: auto;
+  white-space: inherit;
+}
+
+/*
+ * Hide visually and from screen readers, but maintain layout
+ */
+
+.invisible {
+  visibility: hidden;
+}
+
+/*
+ * Clearfix: contain floats
+ *
+ * For modern browsers
+ * 1. The space content is one way to avoid an Opera bug when the
+ *    `contenteditable` attribute is included anywhere else in the document.
+ *    Otherwise it causes space to appear at the top and bottom of elements
+ *    that receive the `clearfix` class.
+ * 2. The use of `table` rather than `block` is only necessary if using
+ *    `:before` to contain the top-margins of child elements.
+ */
+
+.clearfix:before,
+.clearfix:after {
+  content: ' '; /* 1 */
+  display: table; /* 2 */
+}
+
+.clearfix:after {
+  clear: both;
+}
+
+input {
+  display: block;
+  margin: 1rem 0;
+}
+
+/* ==========================================================================
+   EXAMPLE Media Queries for Responsive Design.
+   These examples override the primary ('mobile first') styles.
+   Modify as content requires.
+   ========================================================================== */
+
+@media only screen and (min-width: 35em) {
+  /* Style adjustments for viewports that meet the condition */
+}
