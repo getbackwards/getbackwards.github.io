@@ -1,3 +1,9 @@
+// SASS VARS
+/* --- media queries --- */
+$bp-md: 768px;
+
+$unit-default: 1rem;
+
 /* ### CSS vars ### */
 :root {
   // Color theme one
@@ -19,13 +25,12 @@
   --line-height: 1.5;
   --line-height-less: 1.2;
   // --link-color: #35bbf5;
-  --padding-default: 1rem;
+  --padding-default: #{$unit-default};
   --text-shadow-one: 0.05rem 0.05rem var(--text-shadow-color);
+  // Size matters! Accessibility and Touch Targets
+  // https://medium.com/@zacdicko/size-matters-accessibility-and-touch-targets-56e942adc0cc#:~:text=In%20the%20Android%20Material%20Design,9mm%2C%20regardless%20of%20screen%20size.
+  --touch-min: 48px;
 }
-
-// SASS VARS
-/* --- media queries --- */
-$bp-md: 768px;
 
 /*
  * What follows is the result of much research on cross-browser styling.
@@ -113,10 +118,22 @@ html {
 }
 
 body {
+  color: var(---color-theme-one);
   background-color: var(--color-background-one);
   height: 100%;
   line-height: var(--line-height);
   margin: 0;
+}
+
+button {
+  background-color: transparent;
+  border: 1px solid var(---color-theme-one);
+  margin: $unit-default;
+  min-height: var(--touch-min);
+  padding-left: $unit-default;
+  padding-right: $unit-default;
+  position: fixed;
+  right: 0;
 }
 
 header {
@@ -128,7 +145,7 @@ header {
 h1 {
   font-size: var(--font-size-h1);
   margin-bottom: 0;
-  margin-top: 0.5rem;
+  margin-top: 0;
   text-shadow: var(--text-shadow-one);
 }
 
