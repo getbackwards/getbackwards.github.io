@@ -34,10 +34,13 @@ header p {
   --color-theme-one: #e9c46a;
   --link-color: var(--color-theme-one);
   --text-shadow-color: #e76f51;
-  /* --line-height-h1:  */
+  --border-radius-default: 0.25rem;
+  --border-width-default: 1px;
   --font-size-h1: 4rem;
   --line-height: 1.5;
+  /* --line-height-h1:  */
   --line-height-less: 1.2;
+  --outline-replace: 0 0 3px 2px var(--color-theme-one);
   --padding-default: 1rem;
   --text-shadow-one: 0.05rem 0.05rem var(--text-shadow-color);
   --touch-min: 48px;
@@ -128,15 +131,27 @@ body {
   margin: 0;
 }
 
+a:focus {
+  box-shadow: var(--outline-replace);
+  outline: none;
+}
+
 button {
   background-color: transparent;
-  border: 1px solid var(---color-theme-one);
+  border: var(--border-width-default) solid var(--color-theme-one);
+  border-radius: var(--border-radius-default);
+  color: var(--color-theme-one);
   margin: 1rem;
   min-height: var(--touch-min);
   padding-left: 1rem;
   padding-right: 1rem;
   position: fixed;
   right: 0;
+}
+
+button:focus {
+  box-shadow: var(--outline-replace);
+  outline: none;
 }
 
 header {

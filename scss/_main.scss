@@ -20,11 +20,14 @@ $unit-default: 1rem;
   --link-color: var(--color-theme-one);
   --text-shadow-color: #e76f51;
 
-  /* --line-height-h1:  */
+  --border-radius-default: 0.25rem;
+  --border-width-default: 1px;
   --font-size-h1: 4rem;
   --line-height: 1.5;
+    /* --line-height-h1:  */
   --line-height-less: 1.2;
   // --link-color: #35bbf5;
+  --outline-replace: 0 0 3px 2px var(--color-theme-one);
   --padding-default: #{$unit-default};
   --text-shadow-one: 0.05rem 0.05rem var(--text-shadow-color);
   // Size matters! Accessibility and Touch Targets
@@ -125,15 +128,38 @@ body {
   margin: 0;
 }
 
+a:focus {
+  box-shadow: var(--outline-replace);
+  outline: none;
+}
+
 button {
   background-color: transparent;
-  border: 1px solid var(---color-theme-one);
+
+  border: var(--border-width-default) solid var(--color-theme-one);
+
+  // border: 20px double pink;
+  // border-image: -webkit-linear-gradient(45deg,orange,yellow) 20 stretch;
+
+  // border: none;
+
+  border-radius: var(--border-radius-default);
+
+  // box-shadow: 0 0 0 2px var(--color-theme-one);
+
+  color: var(--color-theme-one);
   margin: $unit-default;
   min-height: var(--touch-min);
   padding-left: $unit-default;
   padding-right: $unit-default;
   position: fixed;
   right: 0;
+}
+
+button:focus {
+  // box-shadow: 0 0 4px 4px var(--color-theme-one);
+  box-shadow: var(--outline-replace);
+  outline: none;
 }
 
 header {
