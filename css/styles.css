@@ -144,7 +144,7 @@ a:focus {
   outline: none;
 }
 
-button {
+.button {
   background-color: transparent;
   border: var(--border-width-default) solid var(--color-theme-one);
   border-radius: var(--border-radius-default);
@@ -157,7 +157,7 @@ button {
   right: 0;
 }
 
-button:focus {
+.button:focus {
   box-shadow: var(--outline-replace);
   outline: none;
 }
@@ -325,7 +325,6 @@ body {
   /* https://stackoverflow.com/questions/41916722/how-do-i-specify-row-heights-in-css-grid-layout */
   /* grid-template-rows */
   /* https://developer.mozilla.org/en-US/docs/Web/CSS/grid-template-rows */
-  grid-template-rows: 0 0 0 0 0 0 0 auto auto 1fr auto;
 }
 
 /* This centers screen elements unless otherwise placed */
@@ -357,19 +356,6 @@ body > * {
 /* adding this stlyes myself, full height VP stuff */
 .wrapper {
   height: 100vh;
-}
-
-body {
-  overflow: hidden;
-}
-
-.buttons {
-  position: absolute;
-  top: 10px;
-  left: 10px;
-  right: 10px;
-  bottom: 10px;
-  z-index: -1;
 }
 
 .buttons button {
@@ -450,6 +436,14 @@ body {
 .right-layer--3 {
   background: #fe9191;
   transition-delay: 0.2s;
+}
+
+html {
+  border: 5px solid green;
+}
+
+html {
+  border: 5px solid palevioletred;
 }
 
 /*# sourceMappingURL=styles.css.map */

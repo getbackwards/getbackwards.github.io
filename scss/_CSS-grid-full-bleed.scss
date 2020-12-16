@@ -13,7 +13,7 @@ body {
   /* https://developer.mozilla.org/en-US/docs/Web/CSS/grid-template-rows */
   // grid-template-rows: auto auto 1fr auto;
   // The first 7 rows are set to 0 so the multi layer transition divs dont's take up a height
-  grid-template-rows: 0 0 0 0 0 0 0 auto auto 1fr auto;
+  // grid-template-rows: 0 0 0 0 0 0 0 auto auto 1fr auto;
 }
 
 /* This centers screen elements unless otherwise placed */

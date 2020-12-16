@@ -140,20 +140,11 @@ a:focus {
   outline: none;
 }
 
-button {
+// commenting out for dev work
+.button {
   background-color: transparent;
-
   border: var(--border-width-default) solid var(--color-theme-one);
-
-  // border: 20px double pink;
-  // border-image: -webkit-linear-gradient(45deg,orange,yellow) 20 stretch;
-
-  // border: none;
-
   border-radius: var(--border-radius-default);
-
-  // box-shadow: 0 0 0 2px var(--color-theme-one);
-
   color: var(--color-theme-one);
   margin: $unit-default;
   min-height: var(--touch-min);
@@ -163,8 +154,8 @@ button {
   right: 0;
 }
 
-button:focus {
-  // box-shadow: 0 0 4px 4px var(--color-theme-one);
+// commenting out for dev work
+.button:focus {
   box-shadow: var(--outline-replace);
   outline: none;
 }
