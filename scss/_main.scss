@@ -24,7 +24,7 @@ $unit-default: 1rem;
   --border-width-default: 1px;
   --font-size-h1: 4rem;
   --line-height: 1.5;
-    /* --line-height-h1:  */
+  /* --line-height-h1:  */
   --line-height-less: 1.2;
   // --link-color: #35bbf5;
   --outline-replace: 0 0 3px 2px var(--color-theme-one);
@@ -115,8 +115,15 @@ textarea {
 /* ==========================================================================
    Author's custom styles
    ========================================================================== */
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+  padding: 0;
+}
 
 html {
+  box-sizing: border-box;
   height: 100%;
 }
 
