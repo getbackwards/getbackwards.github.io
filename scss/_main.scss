@@ -3,7 +3,8 @@
 $bp-md: 768px;
 
 $unit-default: 1rem;
-  
+$unit-large: 2 * $unit-default;
+
 /* ### CSS vars ### */
 :root {
   --border-radius-default: 0.25rem;

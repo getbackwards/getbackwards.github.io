@@ -1,8 +1,9 @@
-@import 'scss-vars/vars-colors';
+@import 'scss-vars/_vars-colors';
 @import 'css-var-to-scss-func';
 @import 'typography';
 @import 'main';
 @import 'CSS-grid-full-bleed';
-@import 'nav';
+@import 'elements/nav';
+@import 'elements/ul';
 // @import 'multi-layer-page-reveal';
 // @import 'debug';

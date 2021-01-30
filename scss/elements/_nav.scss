@@ -1,4 +1,4 @@
-@import 'scss-vars/_vars-colors';
+// @import '../scss-vars/_vars-colors';
 
 nav {
     // background-color: rgba(var(--color-primary--rgb), .6);
@@ -10,14 +10,24 @@ nav {
     //   rgba(233, 196, 106, 1) 43%
     // );
     background-color: tomato;
+    border: 3px solid gold;
     height: 100vh;
+    padding-left: $unit-large;
+    padding-right: 1rem;
     position: fixed;
     width: 100%;
+    right: 100%;
+    transition: right 1s ease-in-out; 
 }
 
-// nav--closed {
-    
-// }
+.nav--open {
+   right: 0%;
+  }
+
+.nav__button {
+    position: fixed;
+    right: 0;
+  }
 
 nav ul {
     list-style: none;

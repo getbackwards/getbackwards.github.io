@@ -365,22 +365,25 @@ body > * {
   height: 100vh;
 }
 
-/* ### CSS vars ### */
-:root {
-  --color-primary: #16498a;
-  --color-primary--rgb: 22, 73, 138;
-  --color-background-one: rgba(38, 70, 83, 1);
-  --color-theme-one: #e9c46a;
-  --link-color: var(--color-theme-one);
-  --text-shadow-color: #e76f51;
-  --touch-min: 48px;
-}
-
 nav {
   background-color: tomato;
+  border: 3px solid gold;
   height: 100vh;
+  padding-left: 2rem;
+  padding-right: 1rem;
   position: fixed;
   width: 100%;
+  right: 100%;
+  transition: right 1s ease-in-out;
+}
+
+.nav--open {
+  right: 0%;
+}
+
+.nav__button {
+  position: fixed;
+  right: 0;
 }
 
 nav ul {
