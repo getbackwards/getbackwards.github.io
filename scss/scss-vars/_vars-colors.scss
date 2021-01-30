@@ -1,0 +1,29 @@
+// SASS color vars
+$color-primary: #16498a;
+$color-secondary: #12284c;
+$color-tertiary: #27add5;
+$color-danger: #d63939;
+
+/* ### CSS vars ### */
+:root {
+    --color-primary: #{$color-primary};
+    --color-primary--rgb: #{hexToRGB($color-primary)};
+
+    // Color theme one
+    // --color-background-one: #000;
+    // --color-theme-one: rgba(77, 200, 186, 1);
+    // --link-color: #35bbf5;
+    // --text-shadow-color: #1a5210;
+  
+    // Color theme two
+    // --color-background-one: #E9C46A;
+    // --color-theme-one: rgba(38, 70, 83, 1); // dark green
+    --color-background-one: rgba(38, 70, 83, 1); // dark green
+    --color-theme-one: #e9c46a;
+    --link-color: var(--color-theme-one);
+    --text-shadow-color: #e76f51;
+  
+    // Size matters! Accessibility and Touch Targets
+    // https://medium.com/@zacdicko/size-matters-accessibility-and-touch-targets-56e942adc0cc#:~:text=In%20the%20Android%20Material%20Design,9mm%2C%20regardless%20of%20screen%20size.
+    --touch-min: 48px;
+}

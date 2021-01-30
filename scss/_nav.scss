@@ -1,0 +1,24 @@
+@import 'scss-vars/_vars-colors';
+
+nav {
+    // background-color: rgba(var(--color-primary--rgb), .6);
+    // background-color: var(--color-theme-one);
+
+    // background: linear-gradient(
+    //   355deg,
+    //   rgba(244, 162, 97, 1) 0%,
+    //   rgba(233, 196, 106, 1) 43%
+    // );
+    background-color: tomato;
+    height: 100vh;
+    position: fixed;
+    width: 100%;
+}
+
+// nav--closed {
+    
+// }
+
+nav ul {
+    list-style: none;
+}

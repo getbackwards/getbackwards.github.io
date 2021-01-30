@@ -3,23 +3,9 @@
 $bp-md: 768px;
 
 $unit-default: 1rem;
-
+  
 /* ### CSS vars ### */
 :root {
-  // Color theme one
-  // --color-background-one: #000;
-  // --color-theme-one: rgba(77, 200, 186, 1);
-  // --link-color: #35bbf5;
-  // --text-shadow-color: #1a5210;
-
-  // Color theme two
-  // --color-background-one: #E9C46A;
-  // --color-theme-one: rgba(38, 70, 83, 1); // dark green
-  --color-background-one: rgba(38, 70, 83, 1); // dark green
-  --color-theme-one: #e9c46a;
-  --link-color: var(--color-theme-one);
-  --text-shadow-color: #e76f51;
-
   --border-radius-default: 0.25rem;
   --border-width-default: 1px;
   --font-size-h1: 4rem;
