@@ -1,34 +1,41 @@
 // @import '../scss-vars/_vars-colors';
 
 nav {
-    // background-color: rgba(var(--color-primary--rgb), .6);
-    // background-color: var(--color-theme-one);
+  align-items: flex-start;
+  // background-color: rgba(var(--color-primary--rgb), .6);
+  // background-color: var(--color-theme-one);
 
-    // background: linear-gradient(
-    //   355deg,
-    //   rgba(244, 162, 97, 1) 0%,
-    //   rgba(233, 196, 106, 1) 43%
-    // );
-    background-color: tomato;
-    border: 3px solid gold;
-    height: 100vh;
-    padding-left: $unit-large;
-    padding-right: 1rem;
-    position: fixed;
-    width: 100%;
-    right: 100%;
-    transition: right 1s ease-in-out; 
+  // background: linear-gradient(
+  //   355deg,
+  //   rgba(244, 162, 97, 1) 0%,
+  //   rgba(233, 196, 106, 1) 43%
+  // );
+  background-color: tomato;
+  border: 3px solid gold;
+  display: flex;
+  height: 100vh;
+  padding-left: $unit-large;
+  padding-right: 1rem;
+  position: fixed;
+  width: 100%;
+  right: 100%;
+  // right: 0%;
+  transition: right 1s ease-in-out;
+}
+
+.nav__button {
+  margin-left: auto;
 }
 
 .nav--open {
-   right: 0%;
-  }
+  right: 0%;
 
-.nav__button {
-    position: fixed;
-    right: 0;
+  .nav__button {
+    right: 0%;
+    position: static;
   }
+}
 
 nav ul {
-    list-style: none;
+  list-style: none;
 }
