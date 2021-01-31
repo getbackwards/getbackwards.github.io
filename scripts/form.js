@@ -15,7 +15,9 @@ form.addEventListener('submit', handleFormSubmit);
 
 console.log('Is this working?');
 
-const FileSystem = require('fs');
-FileSystem.writeFile('file.json', JSON.stringify(formJSON), (error) => {
-  if (error) throw error;
-});
+// Write json object to .json file in JavaScript
+// https://stackoverflow.com/questions/45148833/write-json-object-to-json-file-in-javascript
+// const FileSystem = require('fs');
+// FileSystem.writeFile('file.json', JSON.stringify(formJSON), (error) => {
+//   if (error) throw error;
+// });
