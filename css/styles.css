@@ -130,7 +130,6 @@ body {
   --border-width-default: 1px;
   --font-size-h1: 4rem;
   --line-height: 1.5;
-  /* --line-height-h1:  */
   --line-height-less: 1.2;
   --padding-default: 1rem;
   --text-shadow-one: 0.05rem 0.05rem var(--text-shadow-color);
@@ -463,6 +462,7 @@ header {
 .content {
   grid-area: content;
   padding: 0.5rem;
+  transition: opacity 10s linear;
 }
 @media (min-width: 768px) {
   .content {

@@ -11,16 +11,16 @@ header {
 }
 
 .header__h1 {
-    font-size: 1.75rem;
-    padding-left: $spacing-default;
-  
+  font-size: 1.75rem;
+  padding-left: $spacing-default;
+
+  // Animation
+  // @include animate-from-left($animation-timing-default);
+
+  @media (min-width: $bp-md) {
+    padding-left: $spacing-large;
+
     // Animation
-    // @include animate-from-left($animation-timing-default);
-  
-    @media (min-width: $bp-md) {
-      padding-left: $spacing-large;
-  
-      // Animation
     //   @include animate-from-top($transition-timing-default);
-    }
   }
+}

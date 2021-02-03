@@ -1,6 +1,7 @@
 .content {
   grid-area: content;
   padding: $spacing-default;
+  transition: opacity 10s linear;
 
   @media (min-width: $bp-md) {
     padding: $spacing-large;

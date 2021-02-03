@@ -13,7 +13,6 @@ $outline-replace: 0 0 3px 2px $color-theme-one;
   --border-width-default: 1px;
   --font-size-h1: 4rem;
   --line-height: 1.5;
-  /* --line-height-h1:  */
   --line-height-less: 1.2;
   // --link-color: #35bbf5;
   --padding-default: #{$unit-default};
@@ -32,12 +31,6 @@ $outline-replace: 0 0 3px 2px $color-theme-one;
 /* ==========================================================================
    Base styles: opinionated defaults
    ========================================================================== */
-
-html {
-  // color: var(--color-theme-one);
-  // font: 1em Arial, 'Helvetica Neue', Helvetica, sans-serif;
-  // line-height: var(--line-height);
-}
 
 /*
    * Remove text-shadow in selection highlight:
@@ -109,14 +102,9 @@ textarea {
 //   padding: 0;
 // }
 
-html {
-  // height: 100%;
-}
-
 body {
   color: $color-font-default;
   background-color: $color-background-one;
-  // line-height: var(--line-height);
   margin: 0;
 }
 
@@ -157,7 +145,6 @@ button:focus {
   position: absolute;}
 
 h1 {
-  // font-size: var(--font-size-h1);
   text-shadow: var(--text-shadow-one);
 }
 
@@ -167,7 +154,6 @@ h1 {
 
 header p {
   margin-top: 0;
-  // text-shadow: var(--text-shadow-one);
 }
 
 main {
