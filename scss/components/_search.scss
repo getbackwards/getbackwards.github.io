@@ -1,0 +1,48 @@
+// @import '../../styling/vars';
+
+.search {
+  display: flex;
+  padding-left: $spacing-default;
+  padding-right: $spacing-default;
+
+  @media (min-width: $bp-md) {
+    grid-area: search;
+    margin-right: $spacing-large;
+    padding-bottom: $spacing-large;
+    padding-left: 0;
+    padding-right: 0;
+    padding-top: $spacing-large;
+  }
+}
+
+.search__input {
+  border: none;
+  border-radius: 0;
+  flex: 1;
+  padding: $spacing-default;
+  margin: 0; // Needed for Safari
+
+  @media (min-width: $bp-md) {
+    max-width: 224px; // Needed for Safari
+  }
+
+  &:focus {
+    box-shadow: $box-shadow-focus-replace;
+    outline: none;
+  }
+}
+
+.search__button {
+  background-color: $color-tertiary;
+  border: none;
+  border-radius: 0;
+  padding-left: $spacing-default;
+  padding-right: $spacing-default;
+  margin: 0; // Needed for Safari
+  min-height: auto;
+
+  &:focus {
+    box-shadow: $box-shadow-focus-replace;
+    outline: none;
+  }
+}

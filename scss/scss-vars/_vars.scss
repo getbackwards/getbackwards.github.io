@@ -4,5 +4,8 @@
 $bp-md: 768px;
 
 /* spacing values */
-$spacing: 0.5rem;
-$spacing-md: 1rem;
+$spacing-default: 0.5rem;
+$spacing-large: 1rem;
+
+/* other styling vars */;
+$box-shadow-focus-replace: inset 0 0 0 2px rgb(37, 255, 66);

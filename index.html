@@ -16,7 +16,24 @@
     <link rel="stylesheet" href="css/styles.css" />
   </head>
   <header class="header">
-    <h1 class="header__h1">Header</h1> <Search></Search>
+    <h1 class="header__h1">Header</h1>
+
+    <form class="search">
+      <label class="visually-hidden" htmlFor="search__input">
+        Search hello world
+      </label>
+      <input
+        class="search__input"
+        id="search__input"
+        type="search"
+        name="search form"
+        placeholder="e.g. jobs"
+      />
+      <button class="search__button" type="submit">
+        <span class="visually-hidden">Submit search</span>
+        <img src="./img/search-icon.svg" alt="" />
+      </button>
+    </form>
   </header>
 
   <main class="content">

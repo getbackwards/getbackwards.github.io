@@ -1,4 +1,26 @@
 header {
-    background-color: $color-primary;
-    grid-area: hd;
+  align-items: center;
+  background-color: $color-primary;
+  grid-area: hd;
+
+  @media (min-width: $bp-md) {
+    display: grid;
+    grid-template-areas: 'header header header header search';
+    grid-template-columns: $grid-columns-right-md;
+  }
 }
+
+.header__h1 {
+    font-size: 1.75rem;
+    padding-left: $spacing-default;
+  
+    // Animation
+    // @include animate-from-left($animation-timing-default);
+  
+    @media (min-width: $bp-md) {
+      padding-left: $spacing-large;
+  
+      // Animation
+    //   @include animate-from-top($transition-timing-default);
+    }
+  }

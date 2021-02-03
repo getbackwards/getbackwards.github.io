@@ -1,3 +1,8 @@
 .content {
   grid-area: content;
+  padding: $spacing-default;
+
+  @media (min-width: $bp-md) {
+    padding: $spacing-large;
+  }
 }

@@ -5,10 +5,10 @@
   display: flex;
   grid-area: panel;
   justify-content: space-between;
-  padding: $spacing;
+  padding: $spacing-default;
 
   @media (min-width: $bp-md) {
     display: block;
-    padding: $spacing-md;
+    padding: $spacing-large;
   }
 }

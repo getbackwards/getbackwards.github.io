@@ -5,6 +5,8 @@ $bp-md: 768px;
 $unit-default: 1rem;
 $unit-large: 2 * $unit-default;
 
+$outline-replace: 0 0 3px 2px $color-theme-one;
+
 /* ### CSS vars ### */
 :root {
   --border-radius-default: 0.25rem;
@@ -14,7 +16,6 @@ $unit-large: 2 * $unit-default;
   /* --line-height-h1:  */
   --line-height-less: 1.2;
   // --link-color: #35bbf5;
-  --outline-replace: 0 0 3px 2px var(--color-theme-one);
   --padding-default: #{$unit-default};
   --text-shadow-one: 0.05rem 0.05rem var(--text-shadow-color);
   // Size matters! Accessibility and Touch Targets
@@ -33,9 +34,9 @@ $unit-large: 2 * $unit-default;
    ========================================================================== */
 
 html {
-  color: var(--color-theme-one);
-  font: 1em Arial, 'Helvetica Neue', Helvetica, sans-serif;
-  line-height: var(--line-height);
+  // color: var(--color-theme-one);
+  // font: 1em Arial, 'Helvetica Neue', Helvetica, sans-serif;
+  // line-height: var(--line-height);
 }
 
 /*
@@ -102,22 +103,20 @@ textarea {
 /* ==========================================================================
    Author's custom styles
    ========================================================================== */
-*,
-*:before,
-*:after {
-  box-sizing: inherit;
-  padding: 0;
-}
+// *,
+// *:before,
+// *:after {
+//   padding: 0;
+// }
 
 html {
-  box-sizing: border-box;
-  height: 100%;
+  // height: 100%;
 }
 
 body {
   color: $color-font-default;
   background-color: $color-background-one;
-  line-height: var(--line-height);
+  // line-height: var(--line-height);
   margin: 0;
 }
 
@@ -137,8 +136,9 @@ button {
 }
 
 // commenting out for dev work
-.button:focus {
-  box-shadow: var(--outline-replace);
+button:focus {
+  box-shadow: $box-shadow-focus-replace;
+  // box-shadow: $outline-replace;
   outline: none;
 }
 
@@ -156,16 +156,8 @@ button {
   padding: 0;
   position: absolute;}
 
-header {
-  /* grid-column: 1/4; */
-  padding-left: var(--padding-default);
-  padding-right: var(--padding-default);
-}
-
 h1 {
-  font-size: var(--font-size-h1);
-  margin-bottom: 0;
-  margin-top: 0;
+  // font-size: var(--font-size-h1);
   text-shadow: var(--text-shadow-one);
 }
 
