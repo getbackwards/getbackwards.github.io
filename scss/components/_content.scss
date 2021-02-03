@@ -1,7 +1,7 @@
 .content {
   grid-area: content;
   padding: $spacing-default;
-  transition: opacity 10s linear;
+  // transition: opacity $animation-timing-default linear;
 
   @media (min-width: $bp-md) {
     padding: $spacing-large;
@@ -10,4 +10,16 @@
 
 .content__ul {
   @include animate-fade-in($animation-timing-long);
+}
+
+.content__nav {
+  background-color: $color-primary;
+  border-radius: $spacing-small;
+  padding: $spacing-default;
+  position: absolute;
+  transition: background-color opacity $animation-timing-default linear;
+  z-index: 100;
+
+  // @include animate-height($transition-timing-default);
+  // @include slide-down;
 }

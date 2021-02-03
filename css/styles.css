@@ -89,6 +89,12 @@ input[type=search] {
 /* other styling vars */
 /* color vars */
 /* ### Animation vars ### */
+[data-target=slide-content] {
+  height: 0;
+  overflow: hidden;
+  visibility: hidden;
+}
+
 /* #######
 Font vars
 ####### */
@@ -463,7 +469,6 @@ header {
 .content {
   grid-area: content;
   padding: 0.5rem;
-  transition: opacity 10s linear;
 }
 @media (min-width: 768px) {
   .content {
@@ -482,6 +487,15 @@ header {
   100% {
     opacity: 1;
   }
+}
+
+.content__nav {
+  background-color: #df6c4f;
+  border-radius: 0.25rem;
+  padding: 0.5rem;
+  position: absolute;
+  transition: background-color opacity 1s linear;
+  z-index: 100;
 }
 
 .panel {

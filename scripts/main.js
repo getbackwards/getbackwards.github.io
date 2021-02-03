@@ -9,7 +9,7 @@ const addBgFade = () => {
 };
 
 const nav =
-  '<nav class="content__nav">' +
+  '<nav class="content__nav" [data-target="slide-content"] >' +
   '<ul class="content__ul">' +
   '<li>List item</li>' +
   '<li>List item</li>' +

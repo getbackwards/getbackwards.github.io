@@ -71,3 +71,63 @@ $animation-scale-default: 1.1;
     }
   }
 }
+
+// Reusable animation mixins
+@mixin animate-height($duration) {
+  animation: animate-height $animation-timing-long linear forwards;
+  transition: all $duration 1s;
+  transform-origin: left top;
+
+  // @keyframes animate-height {
+  //   0% {
+  //     height: 0;
+  //   }
+
+  //   100% {
+  //     height: fit-content;
+  //   }
+  // }
+
+  @keyframes animate-height {
+    from {
+      height: 0px;
+      transform: scaleY(0);
+      opacity: 0;
+    }
+    to {
+      height: var(--h); /*This will change for each element */
+      transform: scaleY(1);
+      opacity: 1;
+    }
+  }
+}
+
+@mixin slide-down {
+  $slide-content-height: 88px;
+
+  animation: slide-down $animation-timing-long linear forwards;
+  transition: all $transition-timing-default 1s;
+  @keyframes slide-down {
+    0% {
+      visibility: hidden;
+      height: 0;
+    }
+
+    95% {
+      visibility: visible;
+      height: $slide-content-height;
+    }
+
+    /* Set height to 'auto' after animation for spacing showing form-invalid feedback message */
+    100% {
+      visibility: visible;
+      height: auto;
+    }
+  }
+}
+
+[data-target='slide-content'] {
+  height: 0;
+  overflow: hidden;
+  visibility: hidden;
+}
