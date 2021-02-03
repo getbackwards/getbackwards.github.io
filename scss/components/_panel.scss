@@ -1,3 +1,14 @@
 .panel {
+  align-items: center;
+  background-color: $color-tertiary;
+  color: $color-white;
+  display: flex;
   grid-area: panel;
+  justify-content: space-between;
+  padding: $spacing;
+
+  @media (min-width: $bp-md) {
+    display: block;
+    padding: $spacing-md;
+  }
 }

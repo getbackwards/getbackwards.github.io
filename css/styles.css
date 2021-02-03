@@ -85,6 +85,7 @@ input[type=search] {
 
 /* VARIABLES */
 /* breakpoints */
+/* spacing values */
 /* color vars */
 /* #######
 Font vars
@@ -111,7 +112,7 @@ body {
 body {
   display: grid;
   grid-template-areas: "hd hd hd hd hd" "content content content content content" "panel panel panel panel panel";
-  grid-template-rows: 90px auto 60px;
+  grid-template-rows: 90px auto 80px;
 }
 @media (min-width: 768px) {
   body {
@@ -224,7 +225,6 @@ html {
 body {
   color: #0a0a0a;
   background-color: #49c5b6;
-  height: 100%;
   line-height: var(--line-height);
   margin: 0;
 }
@@ -234,16 +234,12 @@ a:focus {
   outline: none;
 }
 
-.button {
-  background-color: transparent;
+button {
   border: var(--border-width-default) solid var(--color-theme-one);
   border-radius: var(--border-radius-default);
-  color: var(--color-theme-one);
-  margin: 1rem;
   min-height: var(--touch-min);
   padding-left: 1rem;
   padding-right: 1rem;
-  position: fixed;
   right: 0;
 }
 
@@ -423,7 +419,19 @@ input {
   /* Style adjustments for viewports that meet the condition */
 }
 .panel {
+  align-items: center;
+  background-color: #0a0a0a;
+  color: #fff;
+  display: flex;
   grid-area: panel;
+  justify-content: space-between;
+  padding: 0.5rem;
+}
+@media (min-width: 768px) {
+  .panel {
+    display: block;
+    padding: 1rem;
+  }
 }
 
 header {

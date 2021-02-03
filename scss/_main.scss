@@ -117,7 +117,6 @@ html {
 body {
   color: $color-font-default;
   background-color: $color-background-one;
-  height: 100%;
   line-height: var(--line-height);
   margin: 0;
 }
@@ -128,16 +127,12 @@ a:focus {
 }
 
 // commenting out for dev work
-.button {
-  background-color: transparent;
+button {
   border: var(--border-width-default) solid var(--color-theme-one);
   border-radius: var(--border-radius-default);
-  color: var(--color-theme-one);
-  margin: $unit-default;
   min-height: var(--touch-min);
   padding-left: $unit-default;
   padding-right: $unit-default;
-  position: fixed;
   right: 0;
 }
 
