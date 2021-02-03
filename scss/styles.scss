@@ -1,8 +1,13 @@
+@import 'reset';
+@import 'scss-vars/_vars';
 @import 'scss-vars/_vars-colors';
-@import 'css-var-to-scss-func';
+// @import 'css-var-to-scss-func';
 @import 'typography';
+@import 'layout';
 @import 'main';
-@import 'CSS-grid-full-bleed';
+@import 'components/panel';
+@import 'elements/header';
+// @import 'CSS-grid-full-bleed';
 @import 'elements/nav';
 @import 'elements/ul';
 // @import 'multi-layer-page-reveal';

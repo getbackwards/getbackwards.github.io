@@ -6,17 +6,17 @@ Font vars
   /*  can't have CSS vars in meida queries --medium-breakpoint: 800px; */
 }
 
-@font-face {
-  font-family: 'Allan-bold';
-  src: url('../fonts/Allan/Allan-Bold.woff2') format('woff2'),
-    url('../fonts/Allan/Allan-Bold.woff') format('woff');
-}
+// @font-face {
+//   font-family: 'Allan-bold';
+//   src: url('../fonts/Allan/Allan-Bold.woff2') format('woff2'),
+//     url('../fonts/Allan/Allan-Bold.woff') format('woff');
+// }
 
-@font-face {
-  font-family: 'Cardo';
-  src: url('../fonts/Cardo/Cardo-Regular.woff2') format('woff2'),
-    url('../fonts/Cardo/Cardo-Regular.woff') format('woff');
-}
+// @font-face {
+//   font-family: 'Cardo';
+//   src: url('../fonts/Cardo/Cardo-Regular.woff2') format('woff2'),
+//     url('../fonts/Cardo/Cardo-Regular.woff') format('woff');
+// }
 
 // @font-face {
 //   font-family: 'Allura';
@@ -30,11 +30,11 @@ Font vars
 //     url('../fonts/Anton/Anton-Regular.woff') format('woff');
 // }
 
-// @font-face {
-//   font-family: 'Source_Sans_Pro';
-//   src: url('../fonts/Source_Sans_Pro/SourceSansPro-Black.woff2') format('woff2'),
-//     url('../fonts/Source_Sans_Pro/SourceSansPro-Black-Black.woff') format('woff');
-// }
+@font-face {
+  font-family: 'Source_Sans_Pro';
+  src: url('../fonts/Source_Sans_Pro/SourceSansPro-Black.woff2') format('woff2'),
+    url('../fonts/Source_Sans_Pro/SourceSansPro-Black-Black.woff') format('woff');
+}
 
 body {
   /* font: 1rem Arial, sans-serif; */
@@ -43,12 +43,12 @@ body {
   font: 1.38rem Cardo, Arial, sans-serif;
 }
 
-h1 {
-  font-family: Allan-bold, Arial, sans-serif;
-}
+// h1 {
+//   font-family: Allan-bold, Arial, sans-serif;
+// }
 
 header p {
   // font-family: Allura, Arial, sans-serif;
   // font-size: 1.38rem;
-  line-height: var(--line-height-less);
+  // line-height: var(--line-height-less);
 }

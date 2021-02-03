@@ -1,14 +1,91 @@
-/* ### CSS vars ### */
-:root {
-  --color-primary: #16498a;
-  --color-primary--rgb: hexToRGB(#16498a);
-  --color-background-one: rgba(38, 70, 83, 1);
-  --color-theme-one: #e9c46a;
-  --link-color: var(--color-theme-one);
-  --text-shadow-color: #e76f51;
-  --touch-min: 48px;
+/* https://dev.to/hankchizljaw/a-modern-css-reset-6p3 */
+/* Box sizing rules */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
 }
 
+/* Remove default padding */
+ul[class],
+ol[class] {
+  padding: 0;
+}
+
+/* Remove default margin */
+body,
+h1,
+h2,
+h3,
+h4,
+p,
+ul[class],
+ol[class],
+li,
+figure,
+figcaption,
+blockquote,
+dl,
+dd {
+  margin: 0;
+}
+
+/* Set core body defaults */
+body {
+  min-height: 100vh;
+  scroll-behavior: smooth;
+  text-rendering: optimizeSpeed;
+  line-height: 1.5;
+}
+
+/* Remove list styles on ul, ol elements with a class attribute */
+ul[class],
+ol[class] {
+  list-style: none;
+}
+
+/* A elements that don't have a class get default styles */
+a:not([class]) {
+  text-decoration-skip-ink: auto;
+}
+
+/* Make images easier to work with */
+img {
+  max-width: 100%;
+  display: block;
+}
+
+/* Natural flow and rhythm in articles by default */
+article > * + * {
+  margin-top: 1em;
+}
+
+/* Inherit fonts for inputs and buttons */
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+/* Remove all animations and transitions for people that prefer not to see them */
+@media (prefers-reduced-motion: reduce) {
+  * {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+/* Browser specific overrides */
+input[type=search] {
+  -webkit-border-radius: 0;
+  -webkit-appearance: none;
+}
+
+/* VARIABLES */
+/* breakpoints */
+/* color vars */
 /* #######
 Font vars
 ####### */
@@ -18,24 +95,30 @@ Font vars
 }
 
 @font-face {
-  font-family: "Allan-bold";
-  src: url("../fonts/Allan/Allan-Bold.woff2") format("woff2"), url("../fonts/Allan/Allan-Bold.woff") format("woff");
-}
-@font-face {
-  font-family: "Cardo";
-  src: url("../fonts/Cardo/Cardo-Regular.woff2") format("woff2"), url("../fonts/Cardo/Cardo-Regular.woff") format("woff");
+  font-family: "Source_Sans_Pro";
+  src: url("../fonts/Source_Sans_Pro/SourceSansPro-Black.woff2") format("woff2"), url("../fonts/Source_Sans_Pro/SourceSansPro-Black-Black.woff") format("woff");
 }
 body {
   /* font: 1rem Arial, sans-serif; */
   font: 1.38rem Cardo, Arial, sans-serif;
 }
 
-h1 {
-  font-family: Allan-bold, Arial, sans-serif;
+/* reusable CSS grid values */
+/* ####################### */
+/* sets width of elements on the right side above medium breakpoint */
+/* Currently used to keep header consietent height across breakpoints */
+/* Look to refactor later, perhaps with minmax */
+body {
+  display: grid;
+  grid-template-areas: "hd hd hd hd hd" "content content content content content" "panel panel panel panel panel";
+  grid-template-rows: 90px auto 60px;
 }
-
-header p {
-  line-height: var(--line-height-less);
+@media (min-width: 768px) {
+  body {
+    grid-template-areas: "hd hd hd hd hd" "content content content content panel";
+    grid-template-columns: repeat(4, 1fr) 280px;
+    grid-template-rows: 90px auto;
+  }
 }
 
 /* --- media queries --- */
@@ -139,8 +222,8 @@ html {
 }
 
 body {
-  color: var(---color-theme-one);
-  background-color: var(--color-background-one);
+  color: #0a0a0a;
+  background-color: #49c5b6;
   height: 100%;
   line-height: var(--line-height);
   margin: 0;
@@ -339,46 +422,13 @@ input {
 @media only screen and (min-width: 35em) {
   /* Style adjustments for viewports that meet the condition */
 }
-/* https://joshwcomeau.com/css/full-bleed/ */
-body {
-  display: grid;
-  grid-template-columns: 1fr min(65ch, 100%) 1fr;
-  /* adding stuff in, playing around */
-  /* How do I specify row heights in CSS Grid layout? */
-  /* https://stackoverflow.com/questions/41916722/how-do-i-specify-row-heights-in-css-grid-layout */
-  /* grid-template-rows */
-  /* https://developer.mozilla.org/en-US/docs/Web/CSS/grid-template-rows */
+.panel {
+  grid-area: panel;
 }
 
-/* This centers screen elements unless otherwise placed */
-body > * {
-  grid-column: 2;
-}
-
-/* .wrapper {
-  display: grid;
-  grid-template-columns:
-    1fr
-    min(65ch, 100%)
-    1fr;
-}
-.wrapper > * {
-  grid-column: 2;
-} */
-.full-bleed {
-  background-color: var(--color-theme-one);
-  background: linear-gradient(355deg, #f4a261 0%, #e9c46a 43%);
-  grid-column: 1/4;
-  width: 100%;
-  /* This is the styling that I added on to get the effect that I want */
-  max-height: 40vh;
-  object-fit: cover;
-  object-position: center 40%;
-}
-
-/* adding this stlyes myself, full height VP stuff */
-.wrapper {
-  height: 100vh;
+header {
+  background-color: #df6c4f;
+  grid-area: hd;
 }
 
 nav {

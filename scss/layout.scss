@@ -1,0 +1,25 @@
+/* reusable CSS grid values */
+/* ####################### */
+/* sets width of elements on the right side above medium breakpoint */
+$grid-columns-right-md: repeat(4, 1fr) 280px;
+/* Currently used to keep header consietent height across breakpoints */
+/* Look to refactor later, perhaps with minmax */
+$grid-first-row-height: 90px;
+
+body {
+    display: grid;
+    grid-template-areas:
+    "hd hd hd hd hd"
+    "content content content content content"
+    "panel panel panel panel panel";
+    grid-template-rows: $grid-first-row-height auto 60px;
+    // height: 100vh;
+  
+    @media (min-width: $bp-md) {
+      grid-template-areas:
+      "hd hd hd hd hd"
+      "content content content content panel"; 
+      grid-template-columns: $grid-columns-right-md;
+      grid-template-rows: $grid-first-row-height auto;
+    }
+  }

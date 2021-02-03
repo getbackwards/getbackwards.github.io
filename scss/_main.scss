@@ -115,8 +115,8 @@ html {
 }
 
 body {
-  color: var(---color-theme-one);
-  background-color: var(--color-background-one);
+  color: $color-font-default;
+  background-color: $color-background-one;
   height: 100%;
   line-height: var(--line-height);
   margin: 0;
