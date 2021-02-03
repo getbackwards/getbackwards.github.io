@@ -1,6 +1,6 @@
 header {
   align-items: center;
-  background-color: $color-primary;
+  background: $color-primary;
   grid-area: hd;
 
   @media (min-width: $bp-md) {

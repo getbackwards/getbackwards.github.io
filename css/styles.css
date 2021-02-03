@@ -392,7 +392,7 @@ input {
 }
 header {
   align-items: center;
-  background-color: #df6c4f;
+  background: #df6c4f;
   grid-area: hd;
 }
 @media (min-width: 768px) {
@@ -486,39 +486,13 @@ header {
   }
 }
 
-nav {
-  align-items: flex-start;
-  background-color: tomato;
-  border: 3px solid gold;
-  display: flex;
-  height: 100vh;
-  padding-left: 2rem;
-  padding-right: 1rem;
-  position: fixed;
-  width: 100%;
-  right: 100%;
-  transition: right 1s ease-in-out;
-}
-
-.nav__button {
-  margin-left: auto;
-}
-
-.nav--open {
-  right: 0%;
-}
-.nav--open .nav__button {
-  right: 0%;
-  position: static;
-}
-
-nav ul {
-  list-style: none;
-}
-
-.linear-background {
+.background {
   background: #df6c4f;
-  background: linear-gradient(0deg, #df6c4f 0%, #fdbb2d 100%);
+  transition: all 1s linear;
+}
+
+.background--transition {
+  background: #4fdfc2;
 }
 
 /*# sourceMappingURL=styles.css.map */

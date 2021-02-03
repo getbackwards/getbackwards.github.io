@@ -1,8 +1,11 @@
-.linear-background {
-  background: rgb(223, 108, 79);
-  background: linear-gradient(
-    0deg,
-    rgba(223, 108, 79, 1) 0%,
-    rgba(253, 187, 45, 1) 100%
-  );
+.background {
+    background: $color-primary;
+    transition: all 1s linear;
+  }
+
+.background--transition {
+    background: #4fdfc2;
+    // background: green;
 }
+
+
