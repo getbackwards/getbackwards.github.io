@@ -8,4 +8,15 @@
     // background: green;
 }
 
+.background--clipped {
+    clip-path: polygon(50% 0%, 0% 100%, 100% 100%);
+}
+
+.row [class^="col"].background--scaled {
+    background-image: url(http://placekitten.com/g/200/300);
+    background-position-y: -357px;
+    background-size: 100%;
+    min-height: 200px;
+}
+
 
