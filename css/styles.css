@@ -516,4 +516,9 @@ nav ul {
   list-style: none;
 }
 
+.linear-background {
+  background: #df6c4f;
+  background: linear-gradient(0deg, #df6c4f 0%, #fdbb2d 100%);
+}
+
 /*# sourceMappingURL=styles.css.map */
