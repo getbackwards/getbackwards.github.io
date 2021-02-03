@@ -1,6 +1,7 @@
 const contentHeading = document.getElementById('content-heading');
 const headerEl = document.getElementById('header-el');
 const panelButton = document.getElementById('panel-button');
+const panelNav = document.getElementById('panel-nav');
 const searchInput = document.getElementById('search-input');
 
 const addBgFade = () => {
@@ -10,7 +11,7 @@ const addBgFade = () => {
 const nav =
   '<div class="content">' +
   '<nav class="content__nav">' +
-  '<ul>' +
+  '<ul class="content__ul">' +
   '<li>List item</li>' +
   '<li>List item</li>' +
   '<li>List item</li>' +
@@ -38,5 +39,18 @@ panelButton.addEventListener(
   function (e) {
     addNav();
   },
-  { once: true }
+  { once: true } // Only run it once
 );
+
+const panelNavLi = panelNav.getElementsByTagName('li');
+
+const loopThru = () => {
+    let text = ' some text';
+    console.log(panelNavLi.length);
+    for (i = 0; i < panelNavLi.length; i++) {    
+      panelNavLi[i].innerHTML += text;
+      console.log(panelNavLi[i]);
+    }
+  };
+
+loopThru();
