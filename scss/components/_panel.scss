@@ -13,12 +13,6 @@
   }
 }
 
-.panel__heading {
-  @media (min-width: $bp-md) {
-    margin-bottom: $spacing-default;
-  }  
-}
-
 .panel__button {
   @media (min-width: $bp-md) {
     margin-bottom: $spacing-default;
@@ -30,5 +24,14 @@
 
   @media (min-width: $bp-md) {
     display: block;
+  }
+}
+
+.panel__link {
+  display: none;
+
+  @media (min-width: $bp-md) {
+    display: block;
+    margin-bottom: $spacing-default;
   }
 }

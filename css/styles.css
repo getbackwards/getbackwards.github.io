@@ -501,12 +501,6 @@ header {
 }
 
 @media (min-width: 768px) {
-  .panel__heading {
-    margin-bottom: 0.5rem;
-  }
-}
-
-@media (min-width: 768px) {
   .panel__button {
     margin-bottom: 0.5rem;
   }
@@ -518,6 +512,16 @@ header {
 @media (min-width: 768px) {
   .panel__nav {
     display: block;
+  }
+}
+
+.panel__link {
+  display: none;
+}
+@media (min-width: 768px) {
+  .panel__link {
+    display: block;
+    margin-bottom: 0.5rem;
   }
 }
 
