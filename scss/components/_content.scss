@@ -7,3 +7,7 @@
     padding: $spacing-large;
   }
 }
+
+.content__ul {
+  @include animate-fade-in($animation-timing-long);
+}

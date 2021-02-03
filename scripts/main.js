@@ -9,7 +9,6 @@ const addBgFade = () => {
 };
 
 const nav =
-  '<div class="content">' +
   '<nav class="content__nav">' +
   '<ul class="content__ul">' +
   '<li>List item</li>' +
@@ -17,10 +16,6 @@ const nav =
   '<li>List item</li>' +
   '<ul>' +
   '</nav>';
-
-// const addNav = () => {
-//     contentHeading.insertAdjacentHTML('afterend', nav);
-// }
 
 const addNav = () => {
   contentHeading.insertAdjacentHTML('afterend', nav);
@@ -30,7 +25,6 @@ const removeBgFade = () => {
   headerEl.classList.remove('background--transition');
 };
 
-// panelButton.addEventListener('click', addNav);
 searchInput.addEventListener('focus', addBgFade);
 searchInput.addEventListener('blur', removeBgFade);
 
@@ -45,10 +39,13 @@ panelButton.addEventListener(
 const panelNavLi = panelNav.getElementsByTagName('li');
 
 const loopThru = () => {
-    let text = ' some text';
-    console.log(panelNavLi.length);
+    let text = ' item';
     for (i = 0; i < panelNavLi.length; i++) {    
-      panelNavLi[i].innerHTML += text;
+    let index = Number([i]);
+    let num = index + 1;
+    console.log[i];
+    console.log(num);
+      panelNavLi[i].innerHTML += text + ' ' + num;
       console.log(panelNavLi[i]);
     }
   };

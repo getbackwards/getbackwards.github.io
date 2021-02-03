@@ -1,0 +1,73 @@
+/* ### Animation vars ### */
+
+// Timing vars
+$animation-timing-default: 1s;
+$animation-timing-long: 2s;
+
+// Transition vars
+$transition-timing-default: 0.5s;
+$transition-timing-long: 1s;
+$transition-timing-very-long: 2s;
+
+// Scale values
+$animation-scale-default: 1.1;
+
+// Reusable animation mixins
+@mixin animate-fade-in($duration) {
+  animation: animate-fade-in $animation-timing-long linear forwards;
+  transition: all $duration 1s;
+
+  @keyframes animate-fade-in {
+    0% {
+      opacity: 0;
+    }
+
+    100% {
+      opacity: 1;
+    }
+  }
+}
+
+@mixin animate-from-top($duration) {
+  animation: animate-from-top $animation-timing-default linear;
+  transition: all $duration;
+
+  @keyframes animate-from-top {
+    0% {
+      transform: translateY(-100px);
+    }
+
+    100% {
+      transform: translateY(0px);
+    }
+  }
+}
+
+@mixin animate-from-left($duration) {
+  animation: animate-from-left $duration ease-out;
+
+  @keyframes animate-from-left {
+    0% {
+      opacity: 0;
+      transform: translateX(-200px);
+    }
+    100% {
+      opacity: 1;
+      transform: translateX(0px);
+    }
+  }
+}
+
+@mixin animate-from-right($duration) {
+  animation: animate-from-right $duration ease-out forwards;
+
+  @keyframes animate-from-right {
+    0% {
+      transform: translateX(200px);
+    }
+
+    100% {
+      transform: translateX(0px);
+    }
+  }
+}

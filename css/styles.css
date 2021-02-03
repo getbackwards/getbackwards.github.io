@@ -88,6 +88,7 @@ input[type=search] {
 /* spacing values */
 /* other styling vars */
 /* color vars */
+/* ### Animation vars ### */
 /* #######
 Font vars
 ####### */
@@ -470,6 +471,19 @@ header {
   }
 }
 
+.content__ul {
+  animation: animate-fade-in 2s linear forwards;
+  transition: all 2s 1s;
+}
+@keyframes animate-fade-in {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
 .panel {
   align-items: center;
   background-color: #0a0a0a;
@@ -483,6 +497,27 @@ header {
   .panel {
     display: block;
     padding: 1rem;
+  }
+}
+
+@media (min-width: 768px) {
+  .panel__heading {
+    margin-bottom: 0.5rem;
+  }
+}
+
+@media (min-width: 768px) {
+  .panel__button {
+    margin-bottom: 0.5rem;
+  }
+}
+
+.panel__nav {
+  display: none;
+}
+@media (min-width: 768px) {
+  .panel__nav {
+    display: block;
   }
 }
 
