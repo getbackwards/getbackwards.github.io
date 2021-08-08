@@ -143,3 +143,8 @@
     background: var(--color-darkest);
     cursor: pointer;
   }
+
+  [data-whatintent='mouse'] *:focus {
+    outline: none;
+    border: 3px solid red;
+  }

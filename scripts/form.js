@@ -1,5 +1,7 @@
 'use strict';
 
+let whatInput = require('what-input');
+
 function handleFormSubmit(event) {
   event.preventDefault();
   const data = new FormData(event.target);
@@ -21,3 +23,15 @@ console.log('Is this working?');
 // FileSystem.writeFile('file.json', JSON.stringify(formJSON), (error) => {
 //   if (error) throw error;
 // });
+
+const myButton = document.querySelector('button');
+
+whatInput.ask(); // returns `mouse`, `keyboard` or `touch`
+
+myButton.addEventListener('click', () => {
+  if (whatInput.ask() === 'mouse') {
+    // do mousy things
+  } else if (whatInput.ask() === 'keyboard') {
+    // do keyboard things
+  }
+});

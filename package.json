@@ -16,7 +16,8 @@
     "react-movable": "^2.5.1",
     "react-router-dom": "^5.2.0",
     "react-scripts": "^4.0.1",
-    "source-map-explorer": "^2.4.2"
+    "source-map-explorer": "^2.4.2",
+    "what-input": "^5.2.10"
   },
   "scripts": {
     "analyze": "source-map-explorer 'build/static/js/*.js'",
